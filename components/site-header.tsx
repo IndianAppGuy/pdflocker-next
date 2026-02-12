@@ -1,6 +1,7 @@
 "use client";
 
-import { Lock, Download } from "lucide-react";
+import Link from "next/link";
+import { Lock, Download, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -19,10 +20,18 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <Button variant="outline" size="sm" onClick={handleDownload}>
-          <Download className="h-4 w-4 mr-2" />
-          Download
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="sm" asChild>
+            <Link href="/blog">
+              <BookOpen className="h-4 w-4 mr-2" />
+              Blog
+            </Link>
+          </Button>
+          <Button variant="outline" size="sm" onClick={handleDownload}>
+            <Download className="h-4 w-4 mr-2" />
+            Download
+          </Button>
+        </div>
       </div>
     </header>
   );

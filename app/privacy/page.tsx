@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "Privacy Policy | pdflocker.io",
   description:
     "Learn how pdflocker.io handles your data, protects your privacy, and keeps your PDF documents secure.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const LAST_UPDATED = "February 9, 2026";

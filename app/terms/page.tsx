@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "Terms of Service | pdflocker.io",
   description:
     "Read the terms and conditions governing the use of pdflocker.io PDF locking service.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const LAST_UPDATED = "February 9, 2026";

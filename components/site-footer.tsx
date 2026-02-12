@@ -9,6 +9,7 @@ const FOOTER_LINKS = {
     { label: "PDF Compressor", href: "#" },
   ],
   resources: [
+    { label: "Blog", href: "/blog" },
     { label: "How It Works", href: "/#how-to" },
     { label: "FAQ", href: "/#faq" },
     { label: "Security", href: "/#why-this" },
