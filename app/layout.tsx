@@ -3,6 +3,7 @@ import { Outfit, Geist_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SiteHeader } from "@/components/site-header";
+import DataFastAnalytics from "@/components/global/DataFast";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -37,6 +38,7 @@ export default function RootLayout({
           {children}
         </TooltipProvider>
         <Toaster richColors position="bottom-right" />
+        <DataFastAnalytics />
       </body>
     </html>
   );
