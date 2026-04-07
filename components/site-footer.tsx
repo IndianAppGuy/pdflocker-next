@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 const FOOTER_LINKS = {
   product: [
     { label: "PDF Locker", href: "/" },
-    { label: "PDF Unlocker", href: "#" },
+    { label: "PDF Unlocker", href: "https://pdfunlocker.io" },
     { label: "PDF Merger", href: "#" },
     { label: "PDF Compressor", href: "#" },
   ],
