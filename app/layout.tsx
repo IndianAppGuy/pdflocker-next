@@ -18,9 +18,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PDF Locker - Password Protect & Encrypt PDF Documents | pdflocker.io",
+  title: "Password Protect PDF Online Free — Encrypt & Lock PDF | PDF Locker",
   description:
-    "Free online tool to add password protection, encryption, and restrictions to PDF documents. Batch process multiple files. No Adobe Acrobat required. AES-256 encryption.",
+    "Add password protection to PDF files online for free. AES-256 encryption, set open & permission passwords, restrict editing & printing. No signup, no software needed.",
+  keywords: [
+    "password protect pdf",
+    "pdf locker",
+    "encrypt pdf",
+    "lock pdf",
+    "how to password protect a pdf",
+    "pdf encryption",
+    "add password to pdf",
+    "protect pdf online free",
+  ],
+  openGraph: {
+    title: "Password Protect PDF Online Free — Encrypt & Lock PDF",
+    description:
+      "Add password protection to PDF files online for free. AES-256 encryption, restrict editing & printing. No signup needed.",
+    url: "https://pdflocker.io",
+    siteName: "PDF Locker",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Password Protect PDF Online Free — Encrypt & Lock PDF",
+    description:
+      "Add password protection to PDF files online for free. AES-256 encryption, restrict editing & printing.",
+  },
+  alternates: {
+    canonical: "https://pdflocker.io",
+  },
 };
 
 export default function RootLayout({

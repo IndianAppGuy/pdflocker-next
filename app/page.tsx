@@ -155,13 +155,130 @@ const FAQ_ITEMS = [
   {
     question: "Can I remove the password later?",
     answer:
-      "If you know the password, you can use a PDF unlocker tool to remove the password protection. We recommend keeping your passwords stored safely as they cannot be recovered if forgotten.",
+      "If you know the password, you can use our free PDF Unlocker tool at pdfunlocker.io to remove the password protection. We recommend keeping your passwords stored safely as they cannot be recovered if forgotten.",
   },
 ];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      name: "PDF Locker",
+      url: "https://pdflocker.io",
+      description:
+        "Free online tool to add password protection, encryption, and restrictions to PDF documents.",
+      applicationCategory: "UtilityApplication",
+      operatingSystem: "Any",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+    {
+      "@type": "HowTo",
+      name: "How to Password Protect a PDF Online",
+      description:
+        "Add password protection and encryption to PDF documents in four simple steps.",
+      step: [
+        {
+          "@type": "HowToStep",
+          position: 1,
+          name: "Upload Your PDF",
+          text: "Drag & drop your PDF files or folders into the tool, or click to browse and select files from your device.",
+        },
+        {
+          "@type": "HowToStep",
+          position: 2,
+          name: "Set Your Password",
+          text: "Enter an open password, a permission password, or both. Choose your encryption method and restriction preferences.",
+        },
+        {
+          "@type": "HowToStep",
+          position: 3,
+          name: "Configure Restrictions",
+          text: "Select which actions to restrict — printing, copying, editing, page extraction, commenting, and more.",
+        },
+        {
+          "@type": "HowToStep",
+          position: 4,
+          name: "Download Locked PDF",
+          text: "Click Lock All and download your password-protected PDF. For multiple files, download them all as a ZIP archive.",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Is it free to use PDF Locker?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, PDF Locker is completely free to use. There are no hidden charges, no signup required, and no watermarks added to your documents.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What encryption does PDF Locker use?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We support AES-256 bit encryption, which is the strongest encryption standard available for PDF documents. This is the same level of encryption used by banks and government agencies.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are my files safe and private?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Absolutely. Your files are encrypted during transfer using TLS encryption. All uploaded files are automatically deleted from our servers after 1 hour. We never access, read, or share your documents.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What's the difference between an open password and a permission password?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "An open password (user password) is required to open and view the PDF. A permission password (owner password) controls what actions are allowed — such as printing, copying, or editing. You can set one or both.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I lock multiple PDFs at once?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes! You can upload multiple PDF files or entire folders. The same password and restriction settings will be applied to all files. Download them individually or as a single ZIP archive.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need Adobe Acrobat to lock PDFs?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. PDF Locker works entirely in your browser — no software installation or Adobe Acrobat subscription is needed. It works on Mac, Windows, iOS, Android, and Linux.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I remove the password later?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "If you know the password, you can use a PDF unlocker tool like pdfunlocker.io to remove the password protection.",
+          },
+        },
+      ],
+    },
+  ],
+};
 
 export default function Home() {
   return (
     <main id="top" className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ─── Hero Section ─── */}
       <section className="mx-auto max-w-2xl px-4 pt-12 pb-8 sm:pt-16">
         {/* Header */}
@@ -170,7 +287,7 @@ export default function Home() {
             <Lock className="h-8 w-8 text-primary" />
           </div>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Password Protect Your PDFs
+            Password Protect PDF — Encrypt & Lock PDF Online Free
           </h1>
           <p className="mt-3 text-muted-foreground max-w-md mx-auto">
             Add password protection, encryption, and restrictions to your PDF
@@ -262,7 +379,7 @@ export default function Home() {
               Simple steps
             </div>
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-              How to Lock a PDF Online
+              How to Password Protect a PDF Online
             </h2>
             <p className="mt-3 text-muted-foreground max-w-lg mx-auto">
               Protect your PDF documents in four simple steps. No account
@@ -338,6 +455,29 @@ export default function Home() {
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+      </section>
+
+      {/* ─── Cross-link Section ─── */}
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-2xl px-4">
+          <div className="rounded-xl border bg-card p-6 sm:p-8 text-center">
+            <Lock className="h-8 w-8 text-primary mx-auto mb-3" />
+            <h2 className="text-lg font-semibold mb-2">
+              Need to Unlock a PDF?
+            </h2>
+            <p className="text-sm text-muted-foreground mb-4 max-w-md mx-auto">
+              Remove passwords, restrictions, and security from PDF documents with our free PDF Unlocker tool.
+            </p>
+            <a
+              href="https://pdfunlocker.io"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              target="_blank"
+              rel="noopener"
+            >
+              Go to PDF Unlocker &rarr;
+            </a>
+          </div>
         </div>
       </section>
 
