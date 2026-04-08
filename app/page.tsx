@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { PdfLocker } from "@/components/pdf-locker";
 import { SiteFooter } from "@/components/site-footer";
+import { BuiltBy } from "@/components/built-by";
 import {
   Accordion,
   AccordionContent,
@@ -480,6 +481,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <BuiltBy />
 
       {/* ─── Footer ─── */}
       <SiteFooter />
