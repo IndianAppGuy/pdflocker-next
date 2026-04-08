@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 
 const SOCIALS = [
@@ -13,9 +14,25 @@ export function BuiltBy() {
       <div className="mx-auto max-w-2xl px-4">
         <div className="rounded-xl border bg-card p-6 sm:p-8">
           <div className="flex flex-col sm:flex-row gap-5 items-start">
+            <Image
+              src="/sanskar.jpg"
+              alt="Sanskar Tiwari"
+              width={64}
+              height={64}
+              className="rounded-full shrink-0"
+            />
             <div className="flex-1">
-              <p className="text-xs text-muted-foreground mb-2">Built by</p>
-              <h3 className="text-lg font-semibold mb-2">Sanskar Tiwari</h3>
+              <p className="text-xs text-muted-foreground mb-1">Built by</p>
+              <h3 className="text-lg font-semibold mb-2">
+                <a
+                  href="https://sanskartiwari.io"
+                  className="hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Sanskar Tiwari
+                </a>
+              </h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Founder of{" "}
                 <a
